@@ -1,0 +1,10 @@
+<mat-card class="example-card" routerLink="/video-details/{{videoResult.id}}">
+  <img mat-card-image [src]="videoResult.thumbnailUrl" alt="Thumbnail">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"><img mat-card-image src="{{videoResult.users.urlPicture}}" class="circular"></div>
+      <mat-card-title class="fuente">{{ videoResult.title | slice:0:60}}</mat-card-title>
+      <mat-card-subtitle class="fuente">{{ videoResult.users.name }}</mat-card-subtitle>
+      <mat-card-subtitle class="fuente">{{ videoResult.likes }} Likes {{ videoResult.uloapDate | date:'longDate' }} Upload</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+  

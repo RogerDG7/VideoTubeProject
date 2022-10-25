@@ -1,0 +1,17 @@
+.example-card {
+    max-width: 300px;
+    min-width: 200px;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+    padding-top: 15px;
+  }
+
+  .circular {
+    border-radius: 50%;
+}
+
+.fuente {
+  font-size: small;
+}

@@ -1,0 +1,40 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+    padding-top: 15px;
+  }
+  
+  .mat-card-header {
+    padding-top: 15px;
+  }
+  
+  .comment-author {
+    padding-top: 10px;
+    font-weight: lighter;
+    font-size: medium;
+    text-decoration: none;
+    color: aliceblue;
+  }
+  
+  .delete-comment{
+    padding-bottom: 15px;
+  }
+  
+  .view-comments{
+    padding-top: 5px;
+  }
+  
+  .circular {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}

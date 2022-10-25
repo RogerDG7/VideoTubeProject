@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="UserServices\" />
+    <None Remove="UserServices\Contracts\" />
+    <None Remove="UserServices\Implements\" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <None Remove="CommentService\" />
+    <None Remove="CommentService\Contracts\" />
+    <None Remove="CommentService\Implements\" />
+    <None Remove="VideoService\" />
+    <None Remove="VideoService\Contracts\" />
+    <None Remove="VideoService\Implements\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserServices\" />
+    <Folder Include="UserServices\Contracts\" />
+    <Folder Include="UserServices\Implements\" />
+    <Folder Include="CommentService\" />
+    <Folder Include="CommentService\Contracts\" />
+    <Folder Include="CommentService\Implements\" />
+    <Folder Include="VideoService\" />
+    <Folder Include="VideoService\Contracts\" />
+    <Folder Include="VideoService\Implements\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="..\Models\Models.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.7" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,19 @@
+<div class="header">
+    <div class="header__left">
+        <img [routerLink]="['/']" class="header__logo" src="/assets/logo.svg" alt="youtube logo" />
+    </div>
+
+    <form #searchForm="ngForm" (ngSubmit)="submit(searchForm)" class="header__middle">
+        <input ngModel name="search" #search="ngModel" id="search" class="header__search" type="search"
+            placeholder="Search" required />
+        <button class="header__searchBtn" type="submit" [disabled]="!searchForm.valid">
+            <mat-icon class="header__icon">search</mat-icon>
+        </button>
+    </form>
+
+    <div class="header__right">
+        <mat-icon class="header__icon">video_call</mat-icon>
+        <mat-icon class="header__icon">apps</mat-icon>
+        <mat-icon class="header__icon">notifications</mat-icon>
+    </div>
+</div>

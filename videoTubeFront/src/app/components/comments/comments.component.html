@@ -1,0 +1,38 @@
+<form class="example-form" [formGroup]="commentsForm">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Deja un comentario</mat-label>
+        <textarea matInput  placeholder="Deja un comentario" formControlName="comment"></textarea>
+    </mat-form-field>
+    <div fxLayout="row">
+        <div fxFlex="60%"></div>
+        <div fxFlex="40%" fxFlexAlign="end">
+            <span>
+                <button mat-button>CANCEL</button>
+            </span>
+            <span>
+                <button type="submit" (click)="postComment()" mat-button color="primary">COMMENT</button>
+            </span>
+        </div>
+    </div>
+</form>
+<mat-divider></mat-divider>
+
+<div class="view-comments" *ngFor="let comment of commentsDto">
+    <div fxLayout="row">
+        <div fxFlex="50%">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"><img mat-card-image src="{{comment.users.urlPicture}}" class="circular"></div>
+                <a matCardTitle class="comment-author" routerLink="">{{comment.users.name}}</a>
+                <p matCardSubtitle>{{ comment.publishDate | date:'longDate' }}</p>
+            </mat-card-header>
+        </div>
+        <div fxFlex="50%" class="delete-comment" fxFlexAlign="end">
+            <button mat-icon-button>
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div>
+        {{comment.text}}
+    </div>
+</div>

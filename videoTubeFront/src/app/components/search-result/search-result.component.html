@@ -1,0 +1,13 @@
+<div class="div_align_left">
+    <div fxLayout="row wrap">
+        <h3>Resultados</h3>
+    </div>
+    <div fxLayout="row wrap" fxLayoutGap="12px grid">
+        <div *ngFor="let video of lstVideos">
+            <app-video-card [videoResult]="video"></app-video-card>
+        </div>
+    </div>
+    <mat-paginator [length]="response.objectResponse.paginationResponse.totalItems"  (page)="handlePage($event)" [pageSizeOptions]="[2]" aria-label="Select page">
+    </mat-paginator>
+   
+</div>
